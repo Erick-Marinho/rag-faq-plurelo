@@ -26,7 +26,7 @@ app = FastAPI(
 async def root():
     return {
         "status": "success",
-        "message": "Plurelo API is running",
+        "message": "API is running",
         "version": "0.1.0",
     }
 
@@ -34,7 +34,7 @@ async def root():
 async def health():
     return {
         "status": "success",
-        "message": "Plurelo API is running",
+        "message": "Health check successful",
         "version": "0.1.0",
     }
 
