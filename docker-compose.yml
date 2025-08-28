@@ -1,0 +1,13 @@
+services:
+# ==== Serviço da API ====
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag-faq-plurelo
+    restart: unless-stopped
+    command: uv run uvicorn main:app --host 0.0.0.0 --port 8000
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
