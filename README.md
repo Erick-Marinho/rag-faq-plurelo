@@ -140,7 +140,7 @@ O projeto utiliza variáveis de ambiente para configuração. Crie um arquivo `.
 
 ## 📄 Licença
 
-Este projeto está sob a licença [inserir licença aqui].
+Este projeto está sob a licença Plurelo.
 
 ## 🤝 Contribuição
 
@@ -148,4 +148,4 @@ Contribuições são bem-vindas! Por favor, siga as diretrizes de contribuição
 
 ## 📞 Suporte
 
-Para suporte e dúvidas, entre em contato através de [inserir contato].
+Para dúvidas é só chamar!!!!!.
