@@ -1,11 +1,13 @@
-.venv
-.env
-.git
-.gitignore
-.dockerignore
-.dockerfile
-.docker-compose.yml
-.gitignore
-.dockerignore
-.dockerfile
-.docker-compose.yml
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git
+.git/
+
+# IDEs
+.idea/
+.vscode/

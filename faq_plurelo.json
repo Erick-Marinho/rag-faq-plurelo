@@ -1,0 +1,98 @@
+[
+  {
+    "question": "Quais serviços a Plurelo oferece?",
+    "answer": "A Plurelo é uma consultoria full-stack especializada em automação e IA aplicada. Oferecemos soluções que conectam sistemas, dados e pessoas por meio de **integrações de API**, pipelines robustos e **agentes inteligentes** (single e multi-agent). Usamos frameworks de ponta como **LangGraph**, **Agno** e **Haystack** para aplicar técnicas avançadas como RAG e GraphRAG, com foco em governança, observabilidade e resultados."
+  },
+  {
+    "question": "Quem se beneficia dos serviços da Plurelo?",
+    "answer": "Empresas e squads que precisam de automações confiáveis, redução de tarefas manuais, integração entre sistemas e ganhos rápidos de eficiência com controle de custos."
+  },
+  {
+    "question": "Vocês usam IA em todas as automações?",
+    "answer": "Não. Priorizamos soluções determinísticas e introduzimos IA somente quando há benefício claro (qualidade, velocidade ou experiência), com métricas e limites bem definidos."
+  },
+  {
+    "question": "Como vocês tratam segurança e governança?",
+    "answer": "Acessos mínimos necessários, secrets seguros, trilhas de auditoria e observabilidade ponta a ponta. Para agentes/LLMs, aplicamos checkpointers e controles de escopo."
+  },
+  {
+    "question": "Qual o tempo típico para entregar um projeto?",
+    "answer": "Kickoff em 1 semana. MVP entre 2–4 semanas. Operação de produção entre 4–8 semanas, dependendo de integrações e compliance."
+  },
+  {
+    "question": "A Plurelo desenvolve soluções personalizadas ou apenas pacotes prontos?",
+    "answer": "Sim, todas as soluções são personalizadas. Nossos fluxos de automação, agentes de IA e integrações são desenhados a partir dos sistemas, metas e restrições de cada cliente."
+  },
+  {
+    "question": "Qual a diferença entre automação tradicional e automação com IA?",
+    "answer": "A automação tradicional segue regras fixas e determinísticas. Já a automação com IA usa frameworks como LangGraph, Agno e Haystack para lidar com cenários ambíguos, extrair contexto e tomar decisões mais inteligentes."
+  },
+  {
+    "question": "Quais setores podem se beneficiar das soluções da Plurelo?",
+    "answer": "Atendemos diversos setores: energia, setor público, saúde, financeiro, jurídico, e-commerce e indústrias. Qualquer empresa que lide com alto volume de dados e processos repetitivos pode se beneficiar."
+  },
+  {
+    "question": "É necessário substituir meus sistemas atuais para usar as soluções da Plurelo?",
+    "answer": "Não. Nossa abordagem prioriza integração com sistemas já existentes, conectando APIs e bancos de dados para reduzir custos e aumentar o valor extraído de tecnologias que a empresa já possui."
+  },
+  {
+    "question": "Como a Plurelo garante escalabilidade das automações?",
+    "answer": "Utilizamos orquestradores como Kestra e arquiteturas em cloud (Azure, GCP, AWS). Isso permite que fluxos e agentes sejam escalados sob demanda, sem comprometer performance."
+  },
+  {
+    "question": "Vocês oferecem suporte após a entrega do projeto?",
+    "answer": "Sim. Temos modelos de suporte contínuo que incluem monitoramento, ajustes de performance, governança de IA e evolução das automações."
+  },
+  {
+    "question": "Qual a política da Plurelo em relação a dados sensíveis?",
+    "answer": "Trabalhamos com criptografia ponta a ponta, segregação de ambientes, acesso mínimo necessário e conformidade com LGPD e GDPR."
+  },
+  {
+    "question": "É possível integrar as soluções com Microsoft Teams, SharePoint ou Office 365?",
+    "answer": "Sim. Já temos experiência em integrações com a stack Microsoft, incluindo SPFx, SharePoint e Teams, além de Google Workspace."
+  },
+  {
+    "question": "Quais diferenciais a Plurelo traz em relação a outras consultorias de automação?",
+    "answer": "Nossos diferenciais: uso estratégico de IA (sem hype desnecessário), foco em governança e observabilidade, entregas rápidas de MVP e expertise tanto em IA quanto em automação clássica."
+  },
+  {
+    "question": "Quanto tempo leva para medir ROI em um projeto da Plurelo?",
+    "answer": "Em média, nossos clientes percebem redução de custos ou aumento de produtividade em até 60 dias após a implantação inicial."
+  },
+  {
+    "question": "A Plurelo oferece provas de conceito (POC)?",
+    "answer": "Sim. Desenvolvemos POCs rápidas (1–2 semanas) para validar viabilidade técnica antes de expandir para produção."
+  },
+  {
+    "question": "É possível utilizar os agentes inteligentes da Plurelo em atendimento ao cliente?",
+    "answer": "Sim. Criamos agentes que se conectam a canais como WhatsApp (via Chatwoot, Z-API, Twilio), e-mail, chat web e outros, com histórico e contexto preservados. Usamos frameworks como Agno, Haystack e LangGraph para dar poder de RAG (busca + geração) às conversas."
+  },
+  {
+    "question": "Vocês também atuam com visão computacional e análise de documentos?",
+    "answer": "Sim. Desenvolvemos soluções de OCR avançado, classificação de documentos, extração de informações e análise de imagens/vídeos."
+  },
+  {
+    "question": "O que significa 'observabilidade' em projetos da Plurelo?",
+    "answer": "Observabilidade é a capacidade de monitorar fluxos, agentes e modelos em tempo real. Isso inclui logs, métricas e alertas para garantir controle total do ambiente."
+  },
+  {
+    "question": "Como funciona o processo de contratação da Plurelo?",
+    "answer": "1. Consulta inicial gratuita. 2. Diagnóstico das necessidades e desenho de arquitetura. 3. Kickoff com definição de backlog. 4. Entrega de MVP em 2–4 semanas. 5. Evolução contínua com governança e suporte."
+  },
+  {
+    "question": "A Plurelo trabalha com RAG e GraphRAG?",
+    "answer": "Sim. Implementamos RAG (Retrieval-Augmented Generation) clássico para responder com base em bases de conhecimento estruturadas e documentos. Também aplicamos GraphRAG, que permite construir grafos de conhecimento conectando informações complexas entre si, ideal para empresas que lidam com dados inter-relacionados (ex.: jurídico, energia, compliance)."
+  },
+  {
+    "question": "Quais frameworks de IA a Plurelo domina além de LangChain e LangGraph?",
+    "answer": "Além desses, utilizamos Agno (para orquestração de agentes complexos) e Haystack (especialista em RAG e pipelines de busca). Essa diversidade de frameworks nos permite escolher a melhor tecnologia para cada desafio, sem depender de uma única stack."
+  },
+  {
+    "question": "É possível criar agentes multi-turno (que entendem contexto de conversas longas)?",
+    "answer": "Sim. Com frameworks como Agno e LangGraph, criamos agentes capazes de manter memória de longo prazo, aplicar checkpointing e tomar decisões de acordo com o histórico da interação."
+  },
+  {
+    "question": "A Plurelo entrega soluções 'plug and play' ou apenas projetos sob medida?",
+    "answer": "Oferecemos ambos: projetos sob medida e kits de automação (boilerplates) que aceleram a entrega. Por exemplo, temos templates prontos para RAG, GraphRAG, OCR inteligente e integrações de WhatsApp com Chatwoot."
+  }
+]
