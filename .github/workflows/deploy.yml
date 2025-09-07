@@ -1,0 +1,52 @@
+name: Deploy to GCP VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Chave SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Adicionar Host SSH aos hosts conhecidos
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Executar Script de Deploy na VM
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            # 1. Navega para o diretório do projeto
+            # Se o diretório não existir, clona o repositório
+            if [ ! -d "rag-faq-plurelo" ]; then
+              git clone https://github.com/SEU_USUARIO/rag-faq-plurelo.git
+            fi
+            cd rag-faq-plurelo
+
+            # 2. Força a sincronização com o repositório remoto
+            git fetch origin
+            git reset --hard origin/main
+            
+            # 3. Remove o ficheiro .env antigo para garantir uma limpeza total
+            rm -f .env
+
+            # 4. Cria o novo arquivo .env com o valor do Secret do GitHub
+            echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
+
+            # 5. Para e remove os containers antigos (se existirem)
+            docker-compose down
+
+            # 6. Reconstrói a imagem sem cache para garantir que todas as alterações sejam aplicadas
+            docker-compose build --no-cache
+
+            # 7. Inicia os novos containers em modo detached
+            docker-compose up -d
+          EOF
