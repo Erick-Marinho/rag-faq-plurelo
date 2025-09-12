@@ -9,7 +9,7 @@ load_dotenv()
 from app.services.rag_pipeline import faq_pipeline_instance
 
 
-# Configura o logging
+# Configura o logging para o projeto
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",

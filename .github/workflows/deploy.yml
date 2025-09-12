@@ -1,31 +1,26 @@
-name: Deploy to GCP VM
+name: Deploy to VM
 
 on:
   push:
     branches:
-      - main
+      - main # Ou a branch que você usa para deploy
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Configurar Chave SSH
-        uses: webfactory/ssh-agent@v0.9.0
+      - name: Deploy to VM
+        uses: appleboy/ssh-action@master
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Adicionar Host SSH aos hosts conhecidos
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Executar Script de Deploy na VM
-        run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            # 1. Navega para o diretório do projeto
-            # Se o diretório não existir, clona o repositório
+          host: ${{ secrets.SSH_HOST }} # IP da sua VM: 35.198.44.225
+          username: ${{ secrets.SSH_USER }} # Seu usuário na VM: erickgaves
+          key: ${{ secrets.SSH_PRIVATE_KEY }} # A chave que você adicionou nos secrets
+          script: |
+            # 1. Navega para o diretório do projeto, clonando se necessário
             if [ ! -d "rag-faq-plurelo" ]; then
               git clone https://github.com/SEU_USUARIO/rag-faq-plurelo.git
             fi
@@ -41,12 +36,11 @@ jobs:
             # 4. Cria o novo arquivo .env com o valor do Secret do GitHub
             echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
 
-            # 5. Para e remove os containers antigos (se existirem)
+            # 5. Para e remove os containers antigos
             docker-compose down
 
-            # 6. Reconstrói a imagem sem cache para garantir que todas as alterações sejam aplicadas
+            # 6. Reconstrói a imagem sem cache
             docker-compose build --no-cache
 
-            # 7. Inicia os novos containers em modo detached
+            # 7. Inicia os novos containers
             docker-compose up -d
-          EOF
